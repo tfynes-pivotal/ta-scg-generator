@@ -28,6 +28,13 @@ accelerator:
       name: projectNamespaceSpecified
       value: true
 
+  - name: gatewayFqdn
+    label: Fully Qualified Gateway Hostname 
+    description: Fully Qualified Gateway Hostname (on target cluster Contour Ingress domain)
+    display: true
+    inputType: text
+    defaultValue: default
+
   - name: partOfSpecified
     label: Specify TAP-Portal Component 'Part-of'
     display: true
