@@ -28,8 +28,42 @@ accelerator:
       name: projectNamespaceSpecified
       value: true
 
+  - name: partOfSpecified
+    label: Specify TAP-Portal Component 'Part-of'
+    display: true
+    dataType: boolean
+    inputType: checkbox
+    defaultValue: false
+
+  - name: partOf
+    label: TAP-Portal Component 'Part-of'
+    display: true
+    inputType: text
+    defaultValue: tanzu-demo
+    dependsOn: 
+      name: partOfSpecified
+      value: true 
   
-  
+  - name: enableLiveView
+    label: Enable App Live View on Gateway
+    display: true
+    dataType: boolean
+    inputType: checkbox
+    defaultValue: true
+
+  - name: enableMetrics
+    label: Enable Metrics on Gateway
+    display: true
+    dataType: boolean
+    inputType: checkbox
+    defaultValue: true 
+
+  - name: gatewayCount
+    label: Gateway Instnace Count
+    display: true
+    inputType: text
+    defaultValue: 1
+
 
 ####################################################################
 
