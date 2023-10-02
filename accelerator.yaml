@@ -33,7 +33,7 @@ accelerator:
     description: Fully Qualified Gateway Hostname (on target cluster Contour Ingress domain)
     display: true
     inputType: text
-    defaultValue: default
+    defaultValue: gateway1.a3.fynesy.net
 
   - name: partOfSpecified
     label: Specify TAP-Portal Component 'Part-of'
