@@ -1,37 +1,35 @@
 accelerator:
-  displayName: TAP Certificate Creator
-  description: Generates the 'certbot' command to issue certificates manually via DNS TXT record challenge. 
+  displayName: TAP Gateway Generator
+  description: Generates Spring Cloud Gateway deployment definition for operator based deployments in TAP clusters
   tags:
   - beta
 
   options:
-  - name: projectName
-    label: Script archive name
-    description: Accelerator generated script archive name 
+  - name: projecttName
+    label: Gateway Name
+    description: Name for SpringCloudGateway instance
     display: true
     inputType: text
-    defaultValue: certbot-command
+    defaultValue: demo-gateway
 
-  - name: certName
-    label: Certificate Name
-    description: Common Name field of generated certificate
+  - name: projectNamespaceSpecified
+    label: Specify target namespace
+    display: true
+    dataType: boolean
+    inputType: checkbox
+    defaultValue: true
+
+  - name: projectNamespace
+    label: Namespace for Gateway
     display: true
     inputType: text
-    defaultValue: a.fynesy.com
+    defaultValue: default
+    dependsOn: 
+      name: projectNamespaceSpecified
+      value: true
 
-  - name: domainsToRegister
-    label: Domains to Register
-    description: to registry as SAN fields in generated certificate
-    dataType: [string]
-    defaultValue: ['*.a.fynesy.com']
-
-  - name: emailAddress
-    label: Email address for Certbot interaction
-    dataType: string
-    defaultValue: "a@b.com"
-
-
-
+  
+  
 
 ####################################################################
 
