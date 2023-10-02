@@ -58,12 +58,39 @@ accelerator:
     inputType: checkbox
     defaultValue: true 
 
+  - name: gatewayCountSpecified
+    label: Specify Gateway Instance Count
+    display: true
+    dataType: boolean
+    inputType: checkbox
+    defaultValue: false
+
   - name: gatewayCount
-    label: Gateway Instnace Count
+    label: Gateway Instance Count
     display: true
     inputType: text
     defaultValue: 1
+    dependsOn:
+      name: gatewayCountSpecified
+      value: true
 
+  - name: gatewayApiTitleSpecified
+    label: Specify API Group Title for Gateway
+    display: true
+    dataType: boolean
+    inputType: checkbox
+    defaultValue: false
+
+  - name: gatewayApiTitle
+    label: API group title for gateway 
+    display: true
+    inputType: text
+    defaultValue: Tanzu Demos
+    dependsOn:
+      name: gatewayApiTitleSpecified
+      value: true
+
+  
 
 ####################################################################
 
